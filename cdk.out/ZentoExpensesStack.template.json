@@ -1,0 +1,1191 @@
+{
+ "Resources": {
+  "AnnualExpenses8FD14A7C": {
+   "Type": "AWS::S3::Bucket",
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/AnnualExpenses/Resource"
+   }
+  },
+  "ExpensesFBD93F9C": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "KeySchema": [
+     {
+      "AttributeName": "continentCode",
+      "KeyType": "HASH"
+     }
+    ],
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "continentCode",
+      "AttributeType": "S"
+     }
+    ],
+    "ProvisionedThroughput": {
+     "ReadCapacityUnits": 5,
+     "WriteCapacityUnits": 5
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/Expenses/Resource"
+   }
+  },
+  "HandleUploadServiceRole3289A27C": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/HandleUpload/ServiceRole/Resource"
+   }
+  },
+  "HandleUploadServiceRoleDefaultPolicy98FA8B8A": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:GetObject*",
+        "s3:GetBucket*",
+        "s3:List*"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "AnnualExpenses8FD14A7C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "AnnualExpenses8FD14A7C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator",
+        "dynamodb:Query",
+        "dynamodb:GetItem",
+        "dynamodb:Scan",
+        "dynamodb:ConditionCheckItem",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:DescribeTable"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ExpensesFBD93F9C",
+          "Arn"
+         ]
+        },
+        {
+         "Ref": "AWS::NoValue"
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "HandleUploadServiceRoleDefaultPolicy98FA8B8A",
+    "Roles": [
+     {
+      "Ref": "HandleUploadServiceRole3289A27C"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/HandleUpload/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "HandleUploadF1013AEB": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Ref": "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3Bucket869ABD32"
+     },
+     "S3Key": {
+      "Fn::Join": [
+       "",
+       [
+        {
+         "Fn::Select": [
+          0,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3VersionKey4250F0A4"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "Fn::Select": [
+          1,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3VersionKey4250F0A4"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      ]
+     }
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "HandleUploadServiceRole3289A27C",
+      "Arn"
+     ]
+    },
+    "Handler": "index.handler",
+    "Runtime": "nodejs14.x"
+   },
+   "DependsOn": [
+    "HandleUploadServiceRoleDefaultPolicy98FA8B8A",
+    "HandleUploadServiceRole3289A27C"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/HandleUpload/Resource",
+    "aws:asset:path": "asset.f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "GetExpensesServiceRole3106E9F6": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/GetExpenses/ServiceRole/Resource"
+   }
+  },
+  "GetExpensesServiceRoleDefaultPolicy1E89E28E": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator",
+        "dynamodb:Query",
+        "dynamodb:GetItem",
+        "dynamodb:Scan",
+        "dynamodb:ConditionCheckItem",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:DescribeTable"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "ExpensesFBD93F9C",
+          "Arn"
+         ]
+        },
+        {
+         "Ref": "AWS::NoValue"
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "GetExpensesServiceRoleDefaultPolicy1E89E28E",
+    "Roles": [
+     {
+      "Ref": "GetExpensesServiceRole3106E9F6"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/GetExpenses/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "GetExpenses6DC672A6": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Ref": "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3Bucket6945DE26"
+     },
+     "S3Key": {
+      "Fn::Join": [
+       "",
+       [
+        {
+         "Fn::Select": [
+          0,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3VersionKeyF1A03821"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "Fn::Select": [
+          1,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3VersionKeyF1A03821"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      ]
+     }
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "GetExpensesServiceRole3106E9F6",
+      "Arn"
+     ]
+    },
+    "Handler": "index.handler",
+    "Runtime": "nodejs14.x"
+   },
+   "DependsOn": [
+    "GetExpensesServiceRoleDefaultPolicy1E89E28E",
+    "GetExpensesServiceRole3106E9F6"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/GetExpenses/Resource",
+    "aws:asset:path": "asset.4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "UploadCsvServiceRole147633C0": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/UploadCsv/ServiceRole/Resource"
+   }
+  },
+  "UploadCsvServiceRoleDefaultPolicy2034D000": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:PutObject*",
+        "s3:Abort*"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "AnnualExpenses8FD14A7C",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "UploadCsvServiceRoleDefaultPolicy2034D000",
+    "Roles": [
+     {
+      "Ref": "UploadCsvServiceRole147633C0"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/UploadCsv/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "UploadCsv059B1B14": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Ref": "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3Bucket58C553FA"
+     },
+     "S3Key": {
+      "Fn::Join": [
+       "",
+       [
+        {
+         "Fn::Select": [
+          0,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3VersionKeyDD75CF4C"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "Fn::Select": [
+          1,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3VersionKeyDD75CF4C"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      ]
+     }
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "UploadCsvServiceRole147633C0",
+      "Arn"
+     ]
+    },
+    "Handler": "index.handler",
+    "Runtime": "nodejs14.x"
+   },
+   "DependsOn": [
+    "UploadCsvServiceRoleDefaultPolicy2034D000",
+    "UploadCsvServiceRole147633C0"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/UploadCsv/Resource",
+    "aws:asset:path": "asset.339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "ExpensesApiB9453CCF": {
+   "Type": "AWS::ApiGateway::RestApi",
+   "Properties": {
+    "Name": "ExpensesApi"
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Resource"
+   }
+  },
+  "ExpensesApiCloudWatchRoleA107F764": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "apigateway.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/CloudWatchRole/Resource"
+   }
+  },
+  "ExpensesApiAccount9CB36636": {
+   "Type": "AWS::ApiGateway::Account",
+   "Properties": {
+    "CloudWatchRoleArn": {
+     "Fn::GetAtt": [
+      "ExpensesApiCloudWatchRoleA107F764",
+      "Arn"
+     ]
+    }
+   },
+   "DependsOn": [
+    "ExpensesApiB9453CCF"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Account"
+   }
+  },
+  "ExpensesApiDeploymentBE3B3250a84a8f02dd3e732e52dee78dd631a2f1": {
+   "Type": "AWS::ApiGateway::Deployment",
+   "Properties": {
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    },
+    "Description": "Automatically created by the RestApi construct"
+   },
+   "DependsOn": [
+    "ExpensesApiapiEE764C22",
+    "ExpensesApiapiv1expensescontinentCodeGETD87483D5",
+    "ExpensesApiapiv1expensescontinentCodeB656D541",
+    "ExpensesApiapiv1expensesDA093E29",
+    "ExpensesApiapiv11AAB21D3",
+    "ExpensesApiuploadCsvPOSTFF7AABA4",
+    "ExpensesApiuploadCsv649F2608"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Deployment/Resource"
+   }
+  },
+  "ExpensesApiDeploymentStagev1BBD9C273": {
+   "Type": "AWS::ApiGateway::Stage",
+   "Properties": {
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    },
+    "DeploymentId": {
+     "Ref": "ExpensesApiDeploymentBE3B3250a84a8f02dd3e732e52dee78dd631a2f1"
+    },
+    "StageName": "v1"
+   },
+   "DependsOn": [
+    "ExpensesApiAccount9CB36636"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/DeploymentStage.v1/Resource"
+   }
+  },
+  "ExpensesApiuploadCsv649F2608": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Fn::GetAtt": [
+      "ExpensesApiB9453CCF",
+      "RootResourceId"
+     ]
+    },
+    "PathPart": "uploadCsv",
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/uploadCsv/Resource"
+   }
+  },
+  "ExpensesApiuploadCsvPOSTApiPermissionZentoExpensesStackExpensesApiCE4CF13FPOSTuploadCsv83447ED8": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "UploadCsv059B1B14",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:",
+       {
+        "Ref": "AWS::Region"
+       },
+       ":",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":",
+       {
+        "Ref": "ExpensesApiB9453CCF"
+       },
+       "/",
+       {
+        "Ref": "ExpensesApiDeploymentStagev1BBD9C273"
+       },
+       "/POST/uploadCsv"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/uploadCsv/POST/ApiPermission.ZentoExpensesStackExpensesApiCE4CF13F.POST..uploadCsv"
+   }
+  },
+  "ExpensesApiuploadCsvPOSTApiPermissionTestZentoExpensesStackExpensesApiCE4CF13FPOSTuploadCsv7EA916EC": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "UploadCsv059B1B14",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:",
+       {
+        "Ref": "AWS::Region"
+       },
+       ":",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":",
+       {
+        "Ref": "ExpensesApiB9453CCF"
+       },
+       "/test-invoke-stage/POST/uploadCsv"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/uploadCsv/POST/ApiPermission.Test.ZentoExpensesStackExpensesApiCE4CF13F.POST..uploadCsv"
+   }
+  },
+  "ExpensesApiuploadCsvPOSTFF7AABA4": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "HttpMethod": "POST",
+    "ResourceId": {
+     "Ref": "ExpensesApiuploadCsv649F2608"
+    },
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    },
+    "AuthorizationType": "NONE",
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:",
+        {
+         "Ref": "AWS::Region"
+        },
+        ":lambda:path/2015-03-31/functions/",
+        {
+         "Fn::GetAtt": [
+          "UploadCsv059B1B14",
+          "Arn"
+         ]
+        },
+        "/invocations"
+       ]
+      ]
+     }
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/uploadCsv/POST/Resource"
+   }
+  },
+  "ExpensesApiapiEE764C22": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Fn::GetAtt": [
+      "ExpensesApiB9453CCF",
+      "RootResourceId"
+     ]
+    },
+    "PathPart": "api",
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/api/Resource"
+   }
+  },
+  "ExpensesApiapiv11AAB21D3": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Ref": "ExpensesApiapiEE764C22"
+    },
+    "PathPart": "v1",
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/api/v1/Resource"
+   }
+  },
+  "ExpensesApiapiv1expensesDA093E29": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Ref": "ExpensesApiapiv11AAB21D3"
+    },
+    "PathPart": "expenses",
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/api/v1/expenses/Resource"
+   }
+  },
+  "ExpensesApiapiv1expensescontinentCodeB656D541": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Ref": "ExpensesApiapiv1expensesDA093E29"
+    },
+    "PathPart": "{continentCode}",
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/api/v1/expenses/{continentCode}/Resource"
+   }
+  },
+  "ExpensesApiapiv1expensescontinentCodeGETApiPermissionZentoExpensesStackExpensesApiCE4CF13FGETapiv1expensescontinentCode070F7A22": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "GetExpenses6DC672A6",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:",
+       {
+        "Ref": "AWS::Region"
+       },
+       ":",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":",
+       {
+        "Ref": "ExpensesApiB9453CCF"
+       },
+       "/",
+       {
+        "Ref": "ExpensesApiDeploymentStagev1BBD9C273"
+       },
+       "/GET/api/v1/expenses/*"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/api/v1/expenses/{continentCode}/GET/ApiPermission.ZentoExpensesStackExpensesApiCE4CF13F.GET..api.v1.expenses.{continentCode}"
+   }
+  },
+  "ExpensesApiapiv1expensescontinentCodeGETApiPermissionTestZentoExpensesStackExpensesApiCE4CF13FGETapiv1expensescontinentCodeD2058D5A": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "GetExpenses6DC672A6",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:",
+       {
+        "Ref": "AWS::Region"
+       },
+       ":",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":",
+       {
+        "Ref": "ExpensesApiB9453CCF"
+       },
+       "/test-invoke-stage/GET/api/v1/expenses/*"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/api/v1/expenses/{continentCode}/GET/ApiPermission.Test.ZentoExpensesStackExpensesApiCE4CF13F.GET..api.v1.expenses.{continentCode}"
+   }
+  },
+  "ExpensesApiapiv1expensescontinentCodeGETD87483D5": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "HttpMethod": "GET",
+    "ResourceId": {
+     "Ref": "ExpensesApiapiv1expensescontinentCodeB656D541"
+    },
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    },
+    "AuthorizationType": "NONE",
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:",
+        {
+         "Ref": "AWS::Region"
+        },
+        ":lambda:path/2015-03-31/functions/",
+        {
+         "Fn::GetAtt": [
+          "GetExpenses6DC672A6",
+          "Arn"
+         ]
+        },
+        "/invocations"
+       ]
+      ]
+     }
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/api/v1/expenses/{continentCode}/GET/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02Rz27DIAzGn2V3SpN1hx3XP9ptWpTtBRzwMpoAEYZVEeLdF0hb9eSfje1Pn6n5c/XCq6c3uNBGyGEbhXXI45cHMbAWyQYnkO2J0C+1XpmeHa0h74Lw7PhjGnCg0aPLyWfwUyjl++TCS79UXlmTWFaJtOPxEMSApfNKazgAYWJyNqCt7Hj8hm4sOwokNoLuJPD4HozIG/PTIzfotCIqWgo0j61d50ts7KjEXPoKJUa7DWRrxItDBpPqweMF5mUUye8ndXVzw70QNhjPTjiNdtZoiomHLF+pSK5wO0R2xh6vcucP9L9W5tJKKSVmrER+pu1f/crravmfMym1cYuw0sjbNf4D4hpayLwBAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/CDKMetadata/Default"
+   },
+   "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Parameters": {
+  "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3Bucket869ABD32": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334\""
+  },
+  "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3VersionKey4250F0A4": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334\""
+  },
+  "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334ArtifactHash6A59BFB1": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334\""
+  },
+  "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3Bucket6945DE26": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c\""
+  },
+  "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3VersionKeyF1A03821": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c\""
+  },
+  "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cArtifactHashA7D0880A": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c\""
+  },
+  "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3Bucket58C553FA": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6\""
+  },
+  "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3VersionKeyDD75CF4C": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6\""
+  },
+  "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6ArtifactHashED0BE91B": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6\""
+  }
+ },
+ "Outputs": {
+  "ExpensesApiEndpoint0379D726": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "https://",
+      {
+       "Ref": "ExpensesApiB9453CCF"
+      },
+      ".execute-api.",
+      {
+       "Ref": "AWS::Region"
+      },
+      ".",
+      {
+       "Ref": "AWS::URLSuffix"
+      },
+      "/",
+      {
+       "Ref": "ExpensesApiDeploymentStagev1BBD9C273"
+      },
+      "/"
+     ]
+    ]
+   }
+  }
+ },
+ "Conditions": {
+  "CDKMetadataAvailable": {
+   "Fn::Or": [
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "af-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-northwest-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "sa-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-2"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-2"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
