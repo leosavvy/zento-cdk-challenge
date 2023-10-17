@@ -19,13 +19,13 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7",
-              "id": "7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7",
+              "path": "asset.9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd",
+              "id": "9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd",
               "packaging": "zip",
-              "sourceHash": "7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7",
-              "s3BucketParameter": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3BucketB1A27F5E",
-              "s3KeyParameter": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3VersionKey68A26C6A",
-              "artifactHashParameter": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7ArtifactHashFF0F9F66"
+              "sourceHash": "9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd",
+              "s3BucketParameter": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdS3Bucket4E7AFC13",
+              "s3KeyParameter": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdS3VersionKeyDD77E89B",
+              "artifactHashParameter": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdArtifactHash79CD0846"
             },
             "trace": [
               "ConstructNode.addMetadata (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/construct-compat.ts:453:92)",
@@ -38,7 +38,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:25:34)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:24:34)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -62,13 +62,13 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807",
-              "id": "7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807",
+              "path": "asset.6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d",
+              "id": "6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d",
               "packaging": "zip",
-              "sourceHash": "7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807",
-              "s3BucketParameter": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3Bucket3AB9F1F8",
-              "s3KeyParameter": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3VersionKeyA405CB93",
-              "artifactHashParameter": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807ArtifactHash629883F6"
+              "sourceHash": "6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d",
+              "s3BucketParameter": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dS3Bucket3B9B0874",
+              "s3KeyParameter": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dS3VersionKey7DE48C46",
+              "artifactHashParameter": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dArtifactHash1B9E63A0"
             },
             "trace": [
               "ConstructNode.addMetadata (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/construct-compat.ts:453:92)",
@@ -81,7 +81,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:33:33)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:32:33)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -105,13 +105,13 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132",
-              "id": "9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132",
+              "path": "asset.08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fde",
+              "id": "08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fde",
               "packaging": "zip",
-              "sourceHash": "9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132",
-              "s3BucketParameter": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3Bucket11BC3039",
-              "s3KeyParameter": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3VersionKey872DF7B9",
-              "artifactHashParameter": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132ArtifactHashF3845821"
+              "sourceHash": "08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fde",
+              "s3BucketParameter": "AssetParameters08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fdeS3Bucket9D5DF239",
+              "s3KeyParameter": "AssetParameters08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fdeS3VersionKey3CC87EF1",
+              "artifactHashParameter": "AssetParameters08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fdeArtifactHash7DCD0EB0"
             },
             "trace": [
               "ConstructNode.addMetadata (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/construct-compat.ts:453:92)",
@@ -124,7 +124,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:41:31)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:40:31)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -167,7 +167,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetApiDefinition.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/api-definition.ts:197:20)",
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:636:46)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -195,7 +195,7 @@
             "data": "AnnualExpenses8FD14A7C",
             "trace": [
               "new Bucket (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1676:22)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:13:20)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:12:20)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -223,7 +223,7 @@
             "data": "ExpensesFBD93F9C",
             "trace": [
               "new Table (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:1180:18)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:17:19)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:16:19)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -252,7 +252,7 @@
             "trace": [
               "new Role (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-iam/lib/role.ts:381:18)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:688:31)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:25:34)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:24:34)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -285,7 +285,7 @@
               "Function.addToPrincipalOrResource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-iam/lib/grant.ts:115:26)",
               "Bucket.grant (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:917:27)",
               "Bucket.grantRead (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:729:17)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:77:12)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:76:12)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -313,7 +313,7 @@
             "data": "HandleUploadF1013AEB",
             "trace": [
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:771:35)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:25:34)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:24:34)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -335,10 +335,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7/S3Bucket": [
+        "/ZentoExpensesStack/AssetParameters/9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3BucketB1A27F5E",
+            "data": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdS3Bucket4E7AFC13",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -350,7 +350,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:25:34)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:24:34)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -372,10 +372,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7/S3VersionKey": [
+        "/ZentoExpensesStack/AssetParameters/9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3VersionKey68A26C6A",
+            "data": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdS3VersionKeyDD77E89B",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -387,7 +387,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:25:34)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:24:34)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -409,10 +409,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7/ArtifactHash": [
+        "/ZentoExpensesStack/AssetParameters/9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7ArtifactHashFF0F9F66",
+            "data": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdArtifactHash79CD0846",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -424,7 +424,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:25:34)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:24:34)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -446,10 +446,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807/S3Bucket": [
+        "/ZentoExpensesStack/AssetParameters/6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3Bucket3AB9F1F8",
+            "data": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dS3Bucket3B9B0874",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -461,7 +461,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:33:33)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:32:33)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -483,10 +483,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807/S3VersionKey": [
+        "/ZentoExpensesStack/AssetParameters/6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3VersionKeyA405CB93",
+            "data": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dS3VersionKey7DE48C46",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -498,7 +498,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:33:33)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:32:33)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -520,10 +520,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807/ArtifactHash": [
+        "/ZentoExpensesStack/AssetParameters/6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807ArtifactHash629883F6",
+            "data": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dArtifactHash1B9E63A0",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -535,7 +535,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:33:33)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:32:33)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -557,10 +557,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132/S3Bucket": [
+        "/ZentoExpensesStack/AssetParameters/08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fde/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3Bucket11BC3039",
+            "data": "AssetParameters08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fdeS3Bucket9D5DF239",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -572,7 +572,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:41:31)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:40:31)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -594,10 +594,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132/S3VersionKey": [
+        "/ZentoExpensesStack/AssetParameters/08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fde/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3VersionKey872DF7B9",
+            "data": "AssetParameters08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fdeS3VersionKey3CC87EF1",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -609,7 +609,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:41:31)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:40:31)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -631,10 +631,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132/ArtifactHash": [
+        "/ZentoExpensesStack/AssetParameters/08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fde/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132ArtifactHashF3845821",
+            "data": "AssetParameters08bad37ca6c49b6668d776e522749d613efdc5b7c5e80a4d0062cebc88a49fdeArtifactHash7DCD0EB0",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -646,7 +646,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetCode.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/code.ts:285:20)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:708:29)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:41:31)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:40:31)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -683,7 +683,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetApiDefinition.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/api-definition.ts:197:20)",
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:636:46)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -720,7 +720,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetApiDefinition.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/api-definition.ts:197:20)",
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:636:46)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -757,7 +757,7 @@
               "new Asset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:152:40)",
               "AssetApiDefinition.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/api-definition.ts:197:20)",
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:636:46)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -786,7 +786,7 @@
             "trace": [
               "new Role (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-iam/lib/role.ts:381:18)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:688:31)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:33:33)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:32:33)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -818,7 +818,7 @@
               "Function.addToPrincipal (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-iam/lib/grant.ts:164:61)",
               "Table.combinedGrant (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:994:29)",
               "Table.grantReadWriteData (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:754:17)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:79:11)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:78:11)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -846,7 +846,7 @@
             "data": "GetExpenses6DC672A6",
             "trace": [
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:771:35)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:33:33)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:32:33)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -875,7 +875,7 @@
             "trace": [
               "new Role (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-iam/lib/role.ts:381:18)",
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:688:31)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:41:31)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:40:31)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -908,7 +908,7 @@
               "Function.addToPrincipalOrResource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-iam/lib/grant.ts:115:26)",
               "Bucket.grant (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:917:27)",
               "Bucket.grantPut (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:749:17)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:76:12)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:75:12)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -936,7 +936,7 @@
             "data": "UploadCsv059B1B14",
             "trace": [
               "new Function (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-lambda/lib/function.ts:771:35)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:41:31)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:40:31)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -964,7 +964,7 @@
             "data": "ExpensesApiB9453CCF",
             "trace": [
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:637:22)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -993,7 +993,7 @@
             "trace": [
               "new Resource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:446:22)",
               "RootResource.addResource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:183:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:60:32)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:59:32)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1024,7 +1024,7 @@
               "LambdaIntegration.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:64:18)",
               "new Method (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:204:36)",
               "Resource.addMethod (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:64:15)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:63:15)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1055,7 +1055,7 @@
               "LambdaIntegration.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:72:20)",
               "new Method (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:204:36)",
               "Resource.addMethod (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:64:15)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:63:15)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1084,7 +1084,7 @@
             "trace": [
               "new Method (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:222:22)",
               "Resource.addMethod (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:64:15)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:63:15)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1113,7 +1113,7 @@
             "trace": [
               "new Resource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:446:22)",
               "RootResource.addResource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:183:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:67:8)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:66:8)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1142,7 +1142,7 @@
             "trace": [
               "new Resource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:446:22)",
               "Resource.addResource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:183:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:68:8)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:67:8)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1171,7 +1171,7 @@
             "trace": [
               "new Resource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:446:22)",
               "Resource.addResource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:183:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:69:8)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:68:8)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1200,7 +1200,7 @@
             "trace": [
               "new Resource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:446:22)",
               "Resource.addResource (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:183:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:70:40)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:69:40)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1231,7 +1231,7 @@
               "LambdaIntegration.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:64:18)",
               "new Method (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:204:36)",
               "Resource.addMethod (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:74:23)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:73:23)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1262,7 +1262,7 @@
               "LambdaIntegration.bind (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:72:20)",
               "new Method (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:204:36)",
               "Resource.addMethod (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:74:23)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:73:23)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1291,7 +1291,7 @@
             "trace": [
               "new Method (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:222:22)",
               "Resource.addMethod (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:74:23)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:73:23)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1321,7 +1321,7 @@
               "new Deployment (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:75:21)",
               "SpecRestApi._configureDeployment (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:556:32)",
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:654:10)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1351,7 +1351,7 @@
               "new Stage (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:242:22)",
               "SpecRestApi._configureDeployment (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:566:30)",
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:654:10)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1380,7 +1380,7 @@
             "trace": [
               "SpecRestApi._configureDeployment (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:571:7)",
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:654:10)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1410,7 +1410,7 @@
               "new Role (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-iam/lib/role.ts:381:18)",
               "SpecRestApi._configureCloudWatchRole (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:523:18)",
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:661:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",
@@ -1439,7 +1439,7 @@
             "trace": [
               "SpecRestApi._configureCloudWatchRole (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:528:30)",
               "new SpecRestApi (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:661:12)",
-              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:53:17)",
+              "new ZentoExpensesStack (/Users/leonardo/zento-cdk-challenge/cdk/lib/zento-expenses-stack.ts:52:17)",
               "Object.<anonymous> (/Users/leonardo/zento-cdk-challenge/cdk/bin/zento-expenses-challenge.ts:6:1)",
               "Module._compile (node:internal/modules/cjs/loader:1149:14)",
               "Module.m._compile (/Users/leonardo/.nvm/versions/node/v18.10.0/lib/node_modules/ts-node/src/index.ts:1618:23)",

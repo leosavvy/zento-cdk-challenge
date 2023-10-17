@@ -24,7 +24,7 @@ exports.handler = async (event: any) => {
       .on("data", async (data) => {
         try {
           const { continent, totalExpenses, averageExpenses } = data;
-          const continentCode = getContinentCode(continent); // Your logic to get the continent code
+          const continentCode = getContinentCode(continent);
 
           if (!continentCode) {
             console.error(`Invalid continent name: ${continent}`);
