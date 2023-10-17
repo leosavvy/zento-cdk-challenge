@@ -1,3 +1,8 @@
+import { ContinentCode } from "./types/continentCode";
+import { v4 as uuidv4 } from "uuid";
+
+export const getUuid = (): string => uuidv4();
+
 const continentMapping: Record<string, string> = {
   Asia: "AS",
   Africa: "AF",
@@ -14,6 +19,15 @@ const continentMapping: Record<string, string> = {
  * @param continentName Name of the continent
  * @returns Corresponding continent code or null if not found
  */
-export const getContinentCode = (continentName: string): string | null => {
-  return continentMapping[continentName] || null;
+export const getContinentCode = (
+  continentName: string
+): ContinentCode | null => {
+  const code = continentMapping[continentName];
+
+  return (
+    {
+      code,
+      name: continentName,
+    } || null
+  );
 };
