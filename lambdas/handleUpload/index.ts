@@ -1,6 +1,7 @@
 import { S3, DynamoDB } from "aws-sdk";
 import readline from "readline";
-import { getContinentCode } from "./utils";
+import { getContinentCode, getUuid } from "./utils";
+import { ContinentCode } from "./types/continentCode";
 
 const s3 = new S3();
 const dynamodb = new DynamoDB.DocumentClient();
@@ -34,9 +35,9 @@ export const handler = async (event: any) => {
       }
 
       const [continent, totalExpenses, averageExpenses] = line.split(",");
-      const continentCode = getContinentCode(continent);
+      const continentObject: ContinentCode | null = getContinentCode(continent);
 
-      if (!continentCode) {
+      if (!continentObject) {
         console.error(`Invalid continent name: ${continent}`);
         return;
       }
@@ -46,7 +47,8 @@ export const handler = async (event: any) => {
           .put({
             TableName: TABLE_NAME,
             Item: {
-              continentCode,
+              id: getUuid(),
+              continent: continentObject,
               totalExpenses,
               averageExpenses,
             },
