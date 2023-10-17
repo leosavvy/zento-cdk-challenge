@@ -150,7 +150,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": {
-      "Ref": "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3Bucket869ABD32"
+      "Ref": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3BucketB1A27F5E"
      },
      "S3Key": {
       "Fn::Join": [
@@ -163,7 +163,7 @@
            "Fn::Split": [
             "||",
             {
-             "Ref": "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3VersionKey4250F0A4"
+             "Ref": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3VersionKey68A26C6A"
             }
            ]
           }
@@ -176,7 +176,7 @@
            "Fn::Split": [
             "||",
             {
-             "Ref": "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3VersionKey4250F0A4"
+             "Ref": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3VersionKey68A26C6A"
             }
            ]
           }
@@ -201,7 +201,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "ZentoExpensesStack/HandleUpload/Resource",
-    "aws:asset:path": "asset.f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334",
+    "aws:asset:path": "asset.7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -292,7 +292,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": {
-      "Ref": "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3Bucket6945DE26"
+      "Ref": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3Bucket3AB9F1F8"
      },
      "S3Key": {
       "Fn::Join": [
@@ -305,7 +305,7 @@
            "Fn::Split": [
             "||",
             {
-             "Ref": "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3VersionKeyF1A03821"
+             "Ref": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3VersionKeyA405CB93"
             }
            ]
           }
@@ -318,7 +318,7 @@
            "Fn::Split": [
             "||",
             {
-             "Ref": "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3VersionKeyF1A03821"
+             "Ref": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3VersionKeyA405CB93"
             }
            ]
           }
@@ -343,7 +343,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "ZentoExpensesStack/GetExpenses/Resource",
-    "aws:asset:path": "asset.4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c",
+    "aws:asset:path": "asset.7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -427,7 +427,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": {
-      "Ref": "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3Bucket58C553FA"
+      "Ref": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3Bucket11BC3039"
      },
      "S3Key": {
       "Fn::Join": [
@@ -440,7 +440,7 @@
            "Fn::Split": [
             "||",
             {
-             "Ref": "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3VersionKeyDD75CF4C"
+             "Ref": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3VersionKey872DF7B9"
             }
            ]
           }
@@ -453,7 +453,7 @@
            "Fn::Split": [
             "||",
             {
-             "Ref": "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3VersionKeyDD75CF4C"
+             "Ref": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3VersionKey872DF7B9"
             }
            ]
           }
@@ -478,7 +478,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "ZentoExpensesStack/UploadCsv/Resource",
-    "aws:asset:path": "asset.339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6",
+    "aws:asset:path": "asset.9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -486,100 +486,50 @@
   "ExpensesApiB9453CCF": {
    "Type": "AWS::ApiGateway::RestApi",
    "Properties": {
-    "Name": "ExpensesApi"
-   },
-   "Metadata": {
-    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Resource"
-   }
-  },
-  "ExpensesApiCloudWatchRoleA107F764": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "apigateway.amazonaws.com"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "ManagedPolicyArns": [
-     {
+    "BodyS3Location": {
+     "Bucket": {
+      "Ref": "AssetParameters7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35S3Bucket8CE0A94F"
+     },
+     "Key": {
       "Fn::Join": [
        "",
        [
-        "arn:",
         {
-         "Ref": "AWS::Partition"
+         "Fn::Select": [
+          0,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParameters7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35S3VersionKey3299F1DE"
+            }
+           ]
+          }
+         ]
         },
-        ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+        {
+         "Fn::Select": [
+          1,
+          {
+           "Fn::Split": [
+            "||",
+            {
+             "Ref": "AssetParameters7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35S3VersionKey3299F1DE"
+            }
+           ]
+          }
+         ]
+        }
        ]
       ]
      }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/CloudWatchRole/Resource"
-   }
-  },
-  "ExpensesApiAccount9CB36636": {
-   "Type": "AWS::ApiGateway::Account",
-   "Properties": {
-    "CloudWatchRoleArn": {
-     "Fn::GetAtt": [
-      "ExpensesApiCloudWatchRoleA107F764",
-      "Arn"
-     ]
-    }
-   },
-   "DependsOn": [
-    "ExpensesApiB9453CCF"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Account"
-   }
-  },
-  "ExpensesApiDeploymentBE3B3250a84a8f02dd3e732e52dee78dd631a2f1": {
-   "Type": "AWS::ApiGateway::Deployment",
-   "Properties": {
-    "RestApiId": {
-     "Ref": "ExpensesApiB9453CCF"
     },
-    "Description": "Automatically created by the RestApi construct"
+    "Name": "ExpensesApi"
    },
-   "DependsOn": [
-    "ExpensesApiapiEE764C22",
-    "ExpensesApiapiv1expensescontinentCodeGETD87483D5",
-    "ExpensesApiapiv1expensescontinentCodeB656D541",
-    "ExpensesApiapiv1expensesDA093E29",
-    "ExpensesApiapiv11AAB21D3",
-    "ExpensesApiuploadCsvPOSTFF7AABA4",
-    "ExpensesApiuploadCsv649F2608"
-   ],
    "Metadata": {
-    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Deployment/Resource"
-   }
-  },
-  "ExpensesApiDeploymentStagev1BBD9C273": {
-   "Type": "AWS::ApiGateway::Stage",
-   "Properties": {
-    "RestApiId": {
-     "Ref": "ExpensesApiB9453CCF"
-    },
-    "DeploymentId": {
-     "Ref": "ExpensesApiDeploymentBE3B3250a84a8f02dd3e732e52dee78dd631a2f1"
-    },
-    "StageName": "v1"
-   },
-   "DependsOn": [
-    "ExpensesApiAccount9CB36636"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/DeploymentStage.v1/Resource"
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Resource",
+    "aws:asset:path": "asset.7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35.json",
+    "aws:asset:property": "BodyS3Location"
    }
   },
   "ExpensesApiuploadCsv649F2608": {
@@ -917,10 +867,97 @@
     "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Default/api/v1/expenses/{continentCode}/GET/Resource"
    }
   },
+  "ExpensesApiDeploymentBE3B32507481bdebe3a58d6abc5fb2513695d39b": {
+   "Type": "AWS::ApiGateway::Deployment",
+   "Properties": {
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    },
+    "Description": "Automatically created by the RestApi construct"
+   },
+   "DependsOn": [
+    "ExpensesApiapiEE764C22",
+    "ExpensesApiapiv1expensescontinentCodeGETD87483D5",
+    "ExpensesApiapiv1expensescontinentCodeB656D541",
+    "ExpensesApiapiv1expensesDA093E29",
+    "ExpensesApiapiv11AAB21D3",
+    "ExpensesApiuploadCsvPOSTFF7AABA4",
+    "ExpensesApiuploadCsv649F2608"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Deployment/Resource"
+   }
+  },
+  "ExpensesApiDeploymentStagev1BBD9C273": {
+   "Type": "AWS::ApiGateway::Stage",
+   "Properties": {
+    "RestApiId": {
+     "Ref": "ExpensesApiB9453CCF"
+    },
+    "DeploymentId": {
+     "Ref": "ExpensesApiDeploymentBE3B32507481bdebe3a58d6abc5fb2513695d39b"
+    },
+    "StageName": "v1"
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/DeploymentStage.v1/Resource"
+   }
+  },
+  "ExpensesApiCloudWatchRoleA107F764": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "apigateway.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/CloudWatchRole/Resource"
+   }
+  },
+  "ExpensesApiAccount9CB36636": {
+   "Type": "AWS::ApiGateway::Account",
+   "Properties": {
+    "CloudWatchRoleArn": {
+     "Fn::GetAtt": [
+      "ExpensesApiCloudWatchRoleA107F764",
+      "Arn"
+     ]
+    }
+   },
+   "DependsOn": [
+    "ExpensesApiB9453CCF"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "ZentoExpensesStack/ExpensesApi/Account"
+   }
+  },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02Rz27DIAzGn2V3SpN1hx3XP9ptWpTtBRzwMpoAEYZVEeLdF0hb9eSfje1Pn6n5c/XCq6c3uNBGyGEbhXXI45cHMbAWyQYnkO2J0C+1XpmeHa0h74Lw7PhjGnCg0aPLyWfwUyjl++TCS79UXlmTWFaJtOPxEMSApfNKazgAYWJyNqCt7Hj8hm4sOwokNoLuJPD4HozIG/PTIzfotCIqWgo0j61d50ts7KjEXPoKJUa7DWRrxItDBpPqweMF5mUUye8ndXVzw70QNhjPTjiNdtZoiomHLF+pSK5wO0R2xh6vcucP9L9W5tJKKSVmrER+pu1f/crravmfMym1cYuw0sjbNf4D4hpayLwBAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02RzVLDIBDHn8U7pan14NG0jjfHTPQFtrBWmgAZFuxkGN5doDHT0/72m/+y44/NE28eXuBKGyGHbRTWIY+fHsTAeiQbnEDWEqHPsbMyZ3a0hrwLwrPjt+nAgUaPrjgfwU+hhtfOzLleKq+sSaxsibTn8RDEgLVyoZs5AGFicjagrTzx+AWnsc6okNgI+iSBx7dgRJlYUvfcodOKqO5SoHns7a2/2s6OSsy1rlJitN9AkUa8KmQwqTN4vMKcTzChyDJ8O6lFUcV/ZeWp7F7myu/of6wsoYVecRrtrNFUwXdeuWjtXaEVwgbjU0rMWIn8Qtvf3TPfNfmPLqTUxuWs0sj7m/0DZ4LFRsABAAA="
    },
    "Metadata": {
     "aws:cdk:path": "ZentoExpensesStack/CDKMetadata/Default"
@@ -929,41 +966,53 @@
   }
  },
  "Parameters": {
-  "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3Bucket869ABD32": {
+  "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3BucketB1A27F5E": {
    "Type": "String",
-   "Description": "S3 bucket for asset \"f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334\""
+   "Description": "S3 bucket for asset \"7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7\""
   },
-  "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3VersionKey4250F0A4": {
+  "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3VersionKey68A26C6A": {
    "Type": "String",
-   "Description": "S3 key for asset version \"f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334\""
+   "Description": "S3 key for asset version \"7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7\""
   },
-  "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334ArtifactHash6A59BFB1": {
+  "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7ArtifactHashFF0F9F66": {
    "Type": "String",
-   "Description": "Artifact hash for asset \"f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334\""
+   "Description": "Artifact hash for asset \"7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7\""
   },
-  "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3Bucket6945DE26": {
+  "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3Bucket3AB9F1F8": {
    "Type": "String",
-   "Description": "S3 bucket for asset \"4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c\""
+   "Description": "S3 bucket for asset \"7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807\""
   },
-  "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3VersionKeyF1A03821": {
+  "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3VersionKeyA405CB93": {
    "Type": "String",
-   "Description": "S3 key for asset version \"4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c\""
+   "Description": "S3 key for asset version \"7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807\""
   },
-  "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cArtifactHashA7D0880A": {
+  "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807ArtifactHash629883F6": {
    "Type": "String",
-   "Description": "Artifact hash for asset \"4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c\""
+   "Description": "Artifact hash for asset \"7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807\""
   },
-  "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3Bucket58C553FA": {
+  "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3Bucket11BC3039": {
    "Type": "String",
-   "Description": "S3 bucket for asset \"339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6\""
+   "Description": "S3 bucket for asset \"9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132\""
   },
-  "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3VersionKeyDD75CF4C": {
+  "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3VersionKey872DF7B9": {
    "Type": "String",
-   "Description": "S3 key for asset version \"339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6\""
+   "Description": "S3 key for asset version \"9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132\""
   },
-  "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6ArtifactHashED0BE91B": {
+  "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132ArtifactHashF3845821": {
    "Type": "String",
-   "Description": "Artifact hash for asset \"339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6\""
+   "Description": "Artifact hash for asset \"9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132\""
+  },
+  "AssetParameters7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35S3Bucket8CE0A94F": {
+   "Type": "String",
+   "Description": "S3 bucket for asset \"7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35\""
+  },
+  "AssetParameters7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35S3VersionKey3299F1DE": {
+   "Type": "String",
+   "Description": "S3 key for asset version \"7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35\""
+  },
+  "AssetParameters7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35ArtifactHash0A751ED9": {
+   "Type": "String",
+   "Description": "Artifact hash for asset \"7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35\""
   }
  },
  "Outputs": {

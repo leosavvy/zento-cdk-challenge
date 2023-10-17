@@ -264,7 +264,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3Bucket869ABD32"
+                        "Ref": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3BucketB1A27F5E"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -277,7 +277,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3VersionKey4250F0A4"
+                                      "Ref": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3VersionKey68A26C6A"
                                     }
                                   ]
                                 }
@@ -290,7 +290,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParametersf6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334S3VersionKey4250F0A4"
+                                      "Ref": "AssetParameters7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7S3VersionKey68A26C6A"
                                     }
                                   ]
                                 }
@@ -325,13 +325,13 @@
             "id": "AssetParameters",
             "path": "ZentoExpensesStack/AssetParameters",
             "children": {
-              "f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334": {
-                "id": "f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334",
-                "path": "ZentoExpensesStack/AssetParameters/f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334",
+              "7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7": {
+                "id": "7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7",
+                "path": "ZentoExpensesStack/AssetParameters/7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "ZentoExpensesStack/AssetParameters/f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334/S3Bucket",
+                    "path": "ZentoExpensesStack/AssetParameters/7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.204.0"
@@ -339,7 +339,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "ZentoExpensesStack/AssetParameters/f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334/S3VersionKey",
+                    "path": "ZentoExpensesStack/AssetParameters/7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.204.0"
@@ -347,7 +347,7 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "ZentoExpensesStack/AssetParameters/f6cfca0cd113284d6a4b4e6660e84a5344ca9ddda8f49394ebe7c8bbbf555334/ArtifactHash",
+                    "path": "ZentoExpensesStack/AssetParameters/7e457d9033d6a89ad8358cff0f70d0625fe80523bcc6ea4a22fb5707a62271a7/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.204.0"
@@ -359,13 +359,13 @@
                   "version": "1.204.0"
                 }
               },
-              "4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c": {
-                "id": "4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c",
-                "path": "ZentoExpensesStack/AssetParameters/4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c",
+              "7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807": {
+                "id": "7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807",
+                "path": "ZentoExpensesStack/AssetParameters/7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "ZentoExpensesStack/AssetParameters/4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c/S3Bucket",
+                    "path": "ZentoExpensesStack/AssetParameters/7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.204.0"
@@ -373,7 +373,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "ZentoExpensesStack/AssetParameters/4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c/S3VersionKey",
+                    "path": "ZentoExpensesStack/AssetParameters/7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.204.0"
@@ -381,7 +381,7 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "ZentoExpensesStack/AssetParameters/4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2c/ArtifactHash",
+                    "path": "ZentoExpensesStack/AssetParameters/7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.204.0"
@@ -393,13 +393,13 @@
                   "version": "1.204.0"
                 }
               },
-              "339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6": {
-                "id": "339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6",
-                "path": "ZentoExpensesStack/AssetParameters/339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6",
+              "9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132": {
+                "id": "9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132",
+                "path": "ZentoExpensesStack/AssetParameters/9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "ZentoExpensesStack/AssetParameters/339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6/S3Bucket",
+                    "path": "ZentoExpensesStack/AssetParameters/9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.204.0"
@@ -407,7 +407,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "ZentoExpensesStack/AssetParameters/339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6/S3VersionKey",
+                    "path": "ZentoExpensesStack/AssetParameters/9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.204.0"
@@ -415,7 +415,41 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "ZentoExpensesStack/AssetParameters/339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6/ArtifactHash",
+                    "path": "ZentoExpensesStack/AssetParameters/9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.204.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.204.0"
+                }
+              },
+              "7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35": {
+                "id": "7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35",
+                "path": "ZentoExpensesStack/AssetParameters/7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "ZentoExpensesStack/AssetParameters/7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.204.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "ZentoExpensesStack/AssetParameters/7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.204.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "ZentoExpensesStack/AssetParameters/7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.204.0"
@@ -582,7 +616,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3Bucket6945DE26"
+                        "Ref": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3Bucket3AB9F1F8"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -595,7 +629,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3VersionKeyF1A03821"
+                                      "Ref": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3VersionKeyA405CB93"
                                     }
                                   ]
                                 }
@@ -608,7 +642,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters4ea827288c963f82770bf027e4a3fc1cc37dbe33c7d5bc7c7037c25de5beda2cS3VersionKeyF1A03821"
+                                      "Ref": "AssetParameters7696fc67919eae355dcdcfc2d752466131e8baaee3154ca0740a905ea632b807S3VersionKeyA405CB93"
                                     }
                                   ]
                                 }
@@ -781,7 +815,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3Bucket58C553FA"
+                        "Ref": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3Bucket11BC3039"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -794,7 +828,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3VersionKeyDD75CF4C"
+                                      "Ref": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3VersionKey872DF7B9"
                                     }
                                   ]
                                 }
@@ -807,7 +841,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParameters339eb03255da3a25844c41f93fc9c7ce3f9877e1a061ce6ce48275725441aca6S3VersionKeyDD75CF4C"
+                                      "Ref": "AssetParameters9006a1378edfe19af3ca6b390f0bc45cc83f66081b4fac6a315dc6482d7a7132S3VersionKey872DF7B9"
                                     }
                                   ]
                                 }
@@ -842,150 +876,81 @@
             "id": "ExpensesApi",
             "path": "ZentoExpensesStack/ExpensesApi",
             "children": {
+              "APIDefinition": {
+                "id": "APIDefinition",
+                "path": "ZentoExpensesStack/ExpensesApi/APIDefinition",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "ZentoExpensesStack/ExpensesApi/APIDefinition/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.204.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "ZentoExpensesStack/ExpensesApi/APIDefinition/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.204.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.204.0"
+                }
+              },
               "Resource": {
                 "id": "Resource",
                 "path": "ZentoExpensesStack/ExpensesApi/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::ApiGateway::RestApi",
                   "aws:cdk:cloudformation:props": {
+                    "bodyS3Location": {
+                      "bucket": {
+                        "Ref": "AssetParameters7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35S3Bucket8CE0A94F"
+                      },
+                      "key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35S3VersionKey3299F1DE"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters7e9a68f53aac1ce6e5fffc228dad934327cdfe42f78d0608115904e190626d35S3VersionKey3299F1DE"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
                     "name": "ExpensesApi"
                   }
                 },
                 "constructInfo": {
                   "fqn": "@aws-cdk/aws-apigateway.CfnRestApi",
-                  "version": "1.204.0"
-                }
-              },
-              "CloudWatchRole": {
-                "id": "CloudWatchRole",
-                "path": "ZentoExpensesStack/ExpensesApi/CloudWatchRole",
-                "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "ZentoExpensesStack/ExpensesApi/CloudWatchRole/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
-                      "aws:cdk:cloudformation:props": {
-                        "assumeRolePolicyDocument": {
-                          "Statement": [
-                            {
-                              "Action": "sts:AssumeRole",
-                              "Effect": "Allow",
-                              "Principal": {
-                                "Service": "apigateway.amazonaws.com"
-                              }
-                            }
-                          ],
-                          "Version": "2012-10-17"
-                        },
-                        "managedPolicyArns": [
-                          {
-                            "Fn::Join": [
-                              "",
-                              [
-                                "arn:",
-                                {
-                                  "Ref": "AWS::Partition"
-                                },
-                                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
-                              ]
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/aws-iam.CfnRole",
-                      "version": "1.204.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/aws-iam.Role",
-                  "version": "1.204.0"
-                }
-              },
-              "Account": {
-                "id": "Account",
-                "path": "ZentoExpensesStack/ExpensesApi/Account",
-                "attributes": {
-                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::Account",
-                  "aws:cdk:cloudformation:props": {
-                    "cloudWatchRoleArn": {
-                      "Fn::GetAtt": [
-                        "ExpensesApiCloudWatchRoleA107F764",
-                        "Arn"
-                      ]
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/aws-apigateway.CfnAccount",
-                  "version": "1.204.0"
-                }
-              },
-              "Deployment": {
-                "id": "Deployment",
-                "path": "ZentoExpensesStack/ExpensesApi/Deployment",
-                "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "ZentoExpensesStack/ExpensesApi/Deployment/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
-                      "aws:cdk:cloudformation:props": {
-                        "restApiId": {
-                          "Ref": "ExpensesApiB9453CCF"
-                        },
-                        "description": "Automatically created by the RestApi construct"
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/aws-apigateway.CfnDeployment",
-                      "version": "1.204.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/aws-apigateway.Deployment",
-                  "version": "1.204.0"
-                }
-              },
-              "DeploymentStage.v1": {
-                "id": "DeploymentStage.v1",
-                "path": "ZentoExpensesStack/ExpensesApi/DeploymentStage.v1",
-                "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "ZentoExpensesStack/ExpensesApi/DeploymentStage.v1/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
-                      "aws:cdk:cloudformation:props": {
-                        "restApiId": {
-                          "Ref": "ExpensesApiB9453CCF"
-                        },
-                        "deploymentId": {
-                          "Ref": "ExpensesApiDeploymentBE3B3250a84a8f02dd3e732e52dee78dd631a2f1"
-                        },
-                        "stageName": "v1"
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/aws-apigateway.CfnStage",
-                      "version": "1.204.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/aws-apigateway.Stage",
-                  "version": "1.204.0"
-                }
-              },
-              "Endpoint": {
-                "id": "Endpoint",
-                "path": "ZentoExpensesStack/ExpensesApi/Endpoint",
-                "constructInfo": {
-                  "fqn": "@aws-cdk/core.CfnOutput",
                   "version": "1.204.0"
                 }
               },
@@ -1458,10 +1423,143 @@
                   "fqn": "@aws-cdk/aws-apigateway.ResourceBase",
                   "version": "1.204.0"
                 }
+              },
+              "Deployment": {
+                "id": "Deployment",
+                "path": "ZentoExpensesStack/ExpensesApi/Deployment",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ZentoExpensesStack/ExpensesApi/Deployment/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "ExpensesApiB9453CCF"
+                        },
+                        "description": "Automatically created by the RestApi construct"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigateway.CfnDeployment",
+                      "version": "1.204.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-apigateway.Deployment",
+                  "version": "1.204.0"
+                }
+              },
+              "DeploymentStage.v1": {
+                "id": "DeploymentStage.v1",
+                "path": "ZentoExpensesStack/ExpensesApi/DeploymentStage.v1",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ZentoExpensesStack/ExpensesApi/DeploymentStage.v1/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "ExpensesApiB9453CCF"
+                        },
+                        "deploymentId": {
+                          "Ref": "ExpensesApiDeploymentBE3B32507481bdebe3a58d6abc5fb2513695d39b"
+                        },
+                        "stageName": "v1"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigateway.CfnStage",
+                      "version": "1.204.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-apigateway.Stage",
+                  "version": "1.204.0"
+                }
+              },
+              "Endpoint": {
+                "id": "Endpoint",
+                "path": "ZentoExpensesStack/ExpensesApi/Endpoint",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.204.0"
+                }
+              },
+              "CloudWatchRole": {
+                "id": "CloudWatchRole",
+                "path": "ZentoExpensesStack/ExpensesApi/CloudWatchRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ZentoExpensesStack/ExpensesApi/CloudWatchRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "apigateway.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.204.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.204.0"
+                }
+              },
+              "Account": {
+                "id": "Account",
+                "path": "ZentoExpensesStack/ExpensesApi/Account",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::Account",
+                  "aws:cdk:cloudformation:props": {
+                    "cloudWatchRoleArn": {
+                      "Fn::GetAtt": [
+                        "ExpensesApiCloudWatchRoleA107F764",
+                        "Arn"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-apigateway.CfnAccount",
+                  "version": "1.204.0"
+                }
               }
             },
             "constructInfo": {
-              "fqn": "@aws-cdk/aws-apigateway.RestApi",
+              "fqn": "@aws-cdk/aws-apigateway.SpecRestApi",
               "version": "1.204.0"
             }
           },

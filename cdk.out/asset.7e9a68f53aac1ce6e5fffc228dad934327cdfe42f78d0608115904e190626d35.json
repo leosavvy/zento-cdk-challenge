@@ -1,0 +1,27 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Zento Expenses API"
+  },
+  "paths": {
+    "/uploadCsv": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Upload CSV"
+          }
+        }
+      }
+    },
+    "/api/v1/expenses/{continentCode}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Retrieve expenses"
+          }
+        }
+      }
+    }
+  }
+}

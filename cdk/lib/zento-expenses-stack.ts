@@ -34,7 +34,7 @@ export class ZentoExpensesStack extends cdk.Stack {
       handler: "index.handler",
       code: lambda.Code.fromAsset(
         path.join(__dirname, "..", "..", "lambdas", "getExpenses")
-      ), // Replace with your path
+      ),
     });
 
     const uploadCsvFunction = new lambda.Function(this, "UploadCsv", {
@@ -42,10 +42,15 @@ export class ZentoExpensesStack extends cdk.Stack {
       handler: "index.handler",
       code: lambda.Code.fromAsset(
         path.join(__dirname, "..", "..", "lambdas", "uploadCsv")
-      ), // Replace with your path
+      ),
     });
 
-    const api = new apigateway.RestApi(this, "ExpensesApi", {
+    const apiDefinition = apigateway.ApiDefinition.fromAsset(
+      path.join(__dirname, "..", "..", "swagger.json")
+    );
+
+    const api = new apigateway.SpecRestApi(this, "ExpensesApi", {
+      apiDefinition: apiDefinition,
       deployOptions: {
         stageName: "v1",
       },

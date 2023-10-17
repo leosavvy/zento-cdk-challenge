@@ -1,0 +1,37 @@
+# Serverless Architecture with AWS CDK for File Processing
+
+## Context
+
+We have a requirement to process CSV files that contain expenses data categorized by continents. These files will be uploaded to an S3 bucket, and the data needs to be processed and stored in a DynamoDB table. The application will have HTTP API endpoints to trigger the process and check the processing status. We need to decide the architecture and technologies for implementing this.
+
+## Decision
+
+We have decided to use AWS Cloud Development Kit (CDK) to provision the necessary AWS resources, namely Lambda for file processing, S3 for file storage, and DynamoDB for data storage. The backend service exposing the API will be built using NestJS.
+
+## Components
+
+- AWS S3: To store the uploaded CSV files.
+- AWS Lambda: To process the CSV files stored in S3 and populate the DynamoDB table.
+- AWS DynamoDB: To store the processed data for further use.
+- API Gateway: To expose HTTP endpoints.
+- AWS CDK: To script and manage the infrastructure.
+
+## Code
+
+The code will primarily be written in TypeScript, and we will use Jest for testing.
+
+## Consequences
+
+### Pros
+
+- Serverless Architecture: No need to manage underlying infrastructure, making it easier to maintain and scale.
+- Cost-effective: Pay only for what you use.
+- Rapid Deployment: Using CDK allows us to define our infrastructure as code, making it easier to deploy and replicate environments.
+- Strong Typing: Using TypeScript provides better linting and editor support, making the codebase easier to maintain and less prone to runtime errors.
+- Automated Testing: Jest will provide a robust testing framework.
+
+### Cons
+
+- Cold Starts: Lambda functions might experience cold start latency, although this is generally mitigated by the small scope and function of our specific use-case.
+- CDK Learning Curve: AWS CDK itself has a learning curve, especially for those not familiar with AWS services.
+- Limited Execution Time: AWS Lambda has a 15-minute max execution time, which shouldn't be a problem given the expected file sizes but should be monitored.
