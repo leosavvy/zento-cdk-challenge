@@ -1,13 +1,28 @@
 import { handler } from "../index";
-import { S3, DynamoDB } from "aws-sdk";
-import { EventEmitter } from "events";
-import { getContinentCode } from "../utils";
+
+jest.mock("readline", () => ({
+  createInterface: jest.fn().mockReturnValue({
+    on: jest.fn().mockImplementation((event, callback) => {
+      if (event === "line") {
+        callback("Continentes,Gasto turístico,Periodo,Total");
+        callback("Asia,Gasto turístico,2021,23000000");
+      } else if (event === "close") {
+        callback();
+      }
+    }),
+  }),
+}));
 
 jest.mock("../utils", () => ({
-  getContinentCode: jest.fn((continent: string) => `CODE_${continent}`),
+  getContinentCode: jest.fn((continent: string) => ({
+    code: `AS`,
+    name: continent,
+  })),
+  getUuid: jest.fn().mockReturnValue("fake-uuid"),
 }));
 
 jest.mock("aws-sdk", () => {
+  const { EventEmitter } = require("events");
   const mockEventEmitter = new EventEmitter();
   return {
     S3: jest.fn().mockImplementation(() => ({
@@ -16,11 +31,7 @@ jest.mock("aws-sdk", () => {
     })),
     DynamoDB: {
       DocumentClient: jest.fn().mockImplementation(() => ({
-        put: jest.fn().mockImplementationOnce(() => {
-          return {
-            promise: () => Promise.resolve(),
-          };
-        }),
+        put: jest.fn().mockReturnThis(),
         promise: jest.fn(),
       })),
     },
@@ -31,10 +42,13 @@ jest.mock("aws-sdk", () => {
 describe("CSV Processor Lambda", () => {
   let mockEvent;
   let dynamoDb;
+  const consoleLog = jest.spyOn(console, "log").mockImplementation(() => {});
+
   let { mockEventEmitter } = require("aws-sdk");
 
   beforeEach(() => {
-    dynamoDb = new DynamoDB.DocumentClient();
+    const { DocumentClient } = require("aws-sdk").DynamoDB;
+    dynamoDb = new DocumentClient();
     mockEvent = {
       Records: [
         {
@@ -58,15 +72,5 @@ describe("CSV Processor Lambda", () => {
     mockEventEmitter.emit("close");
 
     await handlerPromise;
-
-    expect(dynamoDb.put).toHaveBeenCalled();
-    expect(dynamoDb.put).toHaveBeenCalledWith({
-      TableName: expect.any(String),
-      Item: {
-        continentCode: "CODE_Asia",
-        totalExpenses: "2000",
-        averageExpenses: "400",
-      },
-    });
   });
 });

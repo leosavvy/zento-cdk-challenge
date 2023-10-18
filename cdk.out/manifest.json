@@ -19,13 +19,13 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd",
-              "id": "9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd",
+              "path": "asset.e8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256",
+              "id": "e8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256",
               "packaging": "zip",
-              "sourceHash": "9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd",
-              "s3BucketParameter": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdS3Bucket4E7AFC13",
-              "s3KeyParameter": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdS3VersionKeyDD77E89B",
-              "artifactHashParameter": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdArtifactHash79CD0846"
+              "sourceHash": "e8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256",
+              "s3BucketParameter": "AssetParameterse8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256S3Bucket0F68756F",
+              "s3KeyParameter": "AssetParameterse8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256S3VersionKey084BD8FF",
+              "artifactHashParameter": "AssetParameterse8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256ArtifactHash924EB3C8"
             },
             "trace": [
               "ConstructNode.addMetadata (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/construct-compat.ts:453:92)",
@@ -62,13 +62,13 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d",
-              "id": "6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d",
+              "path": "asset.42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279",
+              "id": "42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279",
               "packaging": "zip",
-              "sourceHash": "6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d",
-              "s3BucketParameter": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dS3Bucket3B9B0874",
-              "s3KeyParameter": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dS3VersionKey7DE48C46",
-              "artifactHashParameter": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dArtifactHash1B9E63A0"
+              "sourceHash": "42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279",
+              "s3BucketParameter": "AssetParameters42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279S3Bucket55C4E439",
+              "s3KeyParameter": "AssetParameters42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279S3VersionKeyFD50780E",
+              "artifactHashParameter": "AssetParameters42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279ArtifactHashD98FBE98"
             },
             "trace": [
               "ConstructNode.addMetadata (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/construct-compat.ts:453:92)",
@@ -335,10 +335,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd/S3Bucket": [
+        "/ZentoExpensesStack/AssetParameters/e8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdS3Bucket4E7AFC13",
+            "data": "AssetParameterse8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256S3Bucket0F68756F",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -372,10 +372,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd/S3VersionKey": [
+        "/ZentoExpensesStack/AssetParameters/e8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdS3VersionKeyDD77E89B",
+            "data": "AssetParameterse8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256S3VersionKey084BD8FF",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -409,10 +409,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fd/ArtifactHash": [
+        "/ZentoExpensesStack/AssetParameters/e8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters9675c6798f449cb2e5383fb9b0f8075451bfd60a388296b9a13dd9ff192ef8fdArtifactHash79CD0846",
+            "data": "AssetParameterse8a8c647ef970887fc7f8729310586cfb17cb52622a5a45b53a151ef3a0f6256ArtifactHash924EB3C8",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -446,10 +446,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d/S3Bucket": [
+        "/ZentoExpensesStack/AssetParameters/42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dS3Bucket3B9B0874",
+            "data": "AssetParameters42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279S3Bucket55C4E439",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -483,10 +483,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d/S3VersionKey": [
+        "/ZentoExpensesStack/AssetParameters/42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dS3VersionKey7DE48C46",
+            "data": "AssetParameters42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279S3VersionKeyFD50780E",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
@@ -520,10 +520,10 @@
             ]
           }
         ],
-        "/ZentoExpensesStack/AssetParameters/6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11d/ArtifactHash": [
+        "/ZentoExpensesStack/AssetParameters/42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParameters6d45e36af7f555590345a915b537b071653abc51800aeb1de51f15115e2df11dArtifactHash1B9E63A0",
+            "data": "AssetParameters42e385925067f48b4d8d3f26573720830d013c15453491c2f5244c251502f279ArtifactHashD98FBE98",
             "trace": [
               "new FileAssetParameters (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
               "LegacyStackSynthesizer.doAddFileAsset (/Users/leonardo/zento-cdk-challenge/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:170:16)",
