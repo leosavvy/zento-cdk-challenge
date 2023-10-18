@@ -11,6 +11,13 @@ const mockResult = {
 
 jest.mock("aws-sdk", () => {
   return {
+    S3: jest.fn().mockImplementation(() => ({
+      getObject: jest.fn().mockImplementationOnce(() => {
+        return {
+          promise: () => Promise.resolve({ something: "something" }),
+        };
+      }),
+    })),
     DynamoDB: {
       DocumentClient: jest.fn().mockImplementation(() => ({
         get: jest.fn().mockImplementationOnce(() => {

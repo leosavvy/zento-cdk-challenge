@@ -1,5 +1,5 @@
 import { S3, DynamoDB } from "aws-sdk";
-import readline from "readline";
+import * as readline from "readline";
 import { getContinentCode, getUuid } from "./utils";
 import { ContinentCode } from "./types/continentCode";
 
@@ -20,7 +20,6 @@ export const handler = async (event: any) => {
 
   try {
     const s3Stream = s3.getObject(params).createReadStream();
-
     const rl = readline.createInterface({
       input: s3Stream,
       terminal: false,
@@ -30,6 +29,7 @@ export const handler = async (event: any) => {
 
     rl.on("line", async (line) => {
       if (isFirstLine) {
+        console.log(`Skipping first line: ${line}`);
         isFirstLine = false;
         return;
       }
@@ -43,6 +43,7 @@ export const handler = async (event: any) => {
       }
 
       try {
+        console.log(`Inserting record for ${continent}`);
         await dynamodb
           .put({
             TableName: TABLE_NAME,
@@ -54,6 +55,7 @@ export const handler = async (event: any) => {
             },
           })
           .promise();
+        console.log(`Successfully inserted record for ${continent}`);
       } catch (err) {
         console.error(`Error inserting into DynamoDB: ${err}`);
       }
