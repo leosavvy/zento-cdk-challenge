@@ -1,7 +1,8 @@
 import { S3, DynamoDB } from "aws-sdk";
 import * as readline from "readline";
-import { getContinentCode, getUuid } from "./utils";
+import { getContinentCode } from "./utils";
 import { ContinentCode } from "./types/continentCode";
+import { ExpenseReport } from "./types/expenseReport";
 
 const s3 = new S3();
 const dynamodb = new DynamoDB.DocumentClient();
@@ -34,7 +35,7 @@ export const handler = async (event: any) => {
         return;
       }
 
-      const [continent, totalExpenses, averageExpenses] = line.split(",");
+      const [continent, reason, period, expenseTotal] = line.split(",");
       const continentObject: ContinentCode | null = getContinentCode(continent);
 
       if (!continentObject) {
@@ -42,16 +43,19 @@ export const handler = async (event: any) => {
         return;
       }
 
+      const expenseObject: ExpenseReport = {
+        continent: continentObject.name,
+        period: parseInt(period),
+        expenseTotal: parseInt(expenseTotal),
+      };
+
       try {
         console.log(`Inserting record for ${continent}`);
         await dynamodb
           .put({
             TableName: TABLE_NAME,
             Item: {
-              id: getUuid(),
-              continent: continentObject,
-              totalExpenses,
-              averageExpenses,
+              ...expenseObject,
             },
           })
           .promise();

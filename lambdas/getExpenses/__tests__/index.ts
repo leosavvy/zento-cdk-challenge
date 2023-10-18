@@ -1,11 +1,13 @@
 import { handler } from "../index";
 import { DynamoDB } from "aws-sdk";
+import { ExpensesResultObject } from "../types/expensesResultObject";
 
-const mockResult = {
-  Item: {
-    continentCode: "AS",
-    totalExpenses: 2000,
-    averageExpenses: 1000,
+const mockResult: Omit<ExpensesResultObject, "id"> = {
+  averageExpenses: [],
+  totalExpenses: [],
+  continent: {
+    code: "AS",
+    name: "Asia",
   },
 };
 
@@ -20,7 +22,7 @@ jest.mock("aws-sdk", () => {
     })),
     DynamoDB: {
       DocumentClient: jest.fn().mockImplementation(() => ({
-        get: jest.fn().mockImplementationOnce(() => {
+        scan: jest.fn().mockImplementationOnce(() => {
           return {
             promise: () => Promise.resolve(mockResult),
           };
@@ -47,8 +49,14 @@ describe("GetExpenses Lambda", () => {
   it("returns a successful response", async () => {
     const response = await handler(mockEvent);
 
+    const { averageExpenses, totalExpenses, continent } = JSON.parse(
+      response.body
+    );
+
     expect(response.statusCode).toBe(200);
-    expect(JSON.parse(response.body)).toEqual(mockResult.Item);
+    expect(continent).toStrictEqual(mockResult.continent);
+    expect(averageExpenses).toStrictEqual(mockResult.averageExpenses);
+    expect(totalExpenses).toStrictEqual(mockResult.totalExpenses);
   });
 
   it("returns a 500 error if DynamoDB query fails", async () => {

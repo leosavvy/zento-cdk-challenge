@@ -1,13 +1,11 @@
-import { handler } from "../index"; // Replace with the actual path of your lambda
-import { getContinentCode } from "../utils"; // Replace with the actual path of your utils
-import readline from "readline";
+import { handler } from "../index";
 
 jest.mock("readline", () => ({
   createInterface: jest.fn().mockReturnValue({
     on: jest.fn().mockImplementation((event, callback) => {
       if (event === "line") {
         callback("Continentes,Gasto turístico,Periodo,Total");
-        callback("Asia,2000,400");
+        callback("Asia,Gasto turístico,2021,23000000");
       } else if (event === "close") {
         callback();
       }

@@ -31,3 +31,24 @@ export const getContinentCode = (
     } || null
   );
 };
+
+/**
+ * Function to get the continent object from the continent code.
+ *
+ * @param continentCode Code of the continent
+ * @returns Corresponding continent object or null if not found
+ */
+export const getContinentObjectFromCode = (
+  continentCode: string
+): ContinentCode | null => {
+  const continentName = Object.keys(continentMapping).find(
+    (key) => continentMapping[key] === continentCode
+  );
+
+  return (
+    {
+      code: continentCode,
+      name: continentName || "",
+    } || null
+  );
+};
